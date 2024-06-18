@@ -8,6 +8,7 @@ class Login extends StatelessWidget {
     return Scaffold(
       
       body: Column(
+
         children: [
           Padding(
             padding: const EdgeInsets.only(top: 100),
@@ -40,7 +41,7 @@ class Login extends StatelessWidget {
                   style: TextStyle(fontWeight: FontWeight.normal,fontSize: 22,color: Colors.black),
                 ),
                 SizedBox(
-                  height: 20,
+                  height: 10,
                 ),
                 TextField(
                   decoration: InputDecoration(
@@ -54,41 +55,38 @@ class Login extends StatelessWidget {
             ),
           ),
           SizedBox(
-            height: 1,
+            height: 5,
           ),
             Container(
-              height: 100,
-              width: double.infinity,
-              child:
-              Padding(
-                padding: const EdgeInsets.only(left: 25),
+             // height:60,
+              //width: double.infinity,,
                 child: Row(
-
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-
                   children: [
-                    ButtonBar(
-                      children: [
-                        TextButton(onPressed: (){},
-                          child: Text('Login',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 25),),
-                          style: TextButton.styleFrom(
-                            backgroundColor: Colors.blue,
-                          ),
-                        ),
-                        TextButton(onPressed: (){},
-                          child: Text('Sign Up',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 25),),
-                          style: TextButton.styleFrom(
-                            backgroundColor: Colors.blue,
-                          ),
-                        ),
-                      ],
-                    )
+                    ElevatedButton(
+                      onPressed: (){},
+                        child: const Text('Sing UP',style: TextStyle(color: Colors.white,
+                        fontSize: 18),),
+                    style: ElevatedButton.styleFrom(
+                      minimumSize: Size(100, 40),
+                      backgroundColor: Colors.blue,
+                    ),
+                    ),
+
+                    ElevatedButton(onPressed: (){},
+                      child: const Text('Sign IN',style: TextStyle(color: Colors.white,
+                      fontSize: 18),),
+                      style: ElevatedButton.styleFrom(
+                        minimumSize: Size(100, 40),
+                        backgroundColor: Colors.blue,
+                      ),
+                    ),
+
                   ],
                 ),
               ),
 
-            )
         ],
       ),
     );
